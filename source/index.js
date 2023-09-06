@@ -15,14 +15,7 @@ $(document).keypress(function(){
    }
   
 });
-$(document).click(function(){
-    if(flag!=true){
-        $("#level-title").html("level - "+lavel);
-           nextsequence();
-           
-           flag=true;
-    }
-});
+
 
 function checkAnswer(currentLevel){
     if(userClickedPattern[currentLevel]===gamePattern[currentLevel]){
