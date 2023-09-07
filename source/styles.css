@@ -63,7 +63,7 @@ body {
   font-size: 30px;
   background-color: burlywood;
 }
- @media (max-width: 300px){
+ @media (max-width: 500px){
   
   #play{
     visibility: visible;
