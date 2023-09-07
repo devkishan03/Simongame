@@ -15,7 +15,7 @@ function start(){
 }
 
 $(document).keypress(function(){
-    setInterval(() => {
+    setTimeout(() => {
         start();
      }, 1000); 
 });
@@ -23,7 +23,7 @@ $(document).keypress(function(){
 $("#play").click(function(){
     $("#play").addClass("pressed");
     setTimeout(function(){$("#play").removeClass("pressed")},100);
-     setInterval(() => {
+     setTimeout(() => {
         start();
      }, 1000);  
 });
