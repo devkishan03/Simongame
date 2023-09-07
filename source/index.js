@@ -6,24 +6,26 @@ var flag=false;
 
 var lavel=0;
 
-$(document).keypress(function(){
-   if(flag!=true){
-    $("#level-title").html("level - "+lavel);
-       nextsequence();
-       
-       flag=true;
-   }
-  
-});
-$("#play").click(function(){
-    $("#play").addClass("pressed");
-    setTimeout(function(){$("#play").removeClass("pressed")},100);
+function start(){
     if(flag!=true){
         $("#level-title").html("level - "+lavel);
            nextsequence();
-           
            flag=true;
-    }
+       }
+}
+
+$(document).keypress(function(){
+    setTimeout(() => {
+        start();
+     }, 1000); 
+});
+
+$("#play").click(function(){
+    $("#play").addClass("pressed");
+    setTimeout(function(){$("#play").removeClass("pressed")},100);
+     setTimeout(() => {
+        start();
+     }, 1000);  
 });
 
 function checkAnswer(currentLevel){
