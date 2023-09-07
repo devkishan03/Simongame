@@ -68,6 +68,10 @@ body {
   #play{
     visibility: visible;
   }
-  
+  body {
+ 
+  background-color: #011F3F;
+}
+
   
 } 
